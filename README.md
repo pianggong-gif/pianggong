@@ -1,10 +1,8 @@
-# pianggong
-Digital archive of Pingjiang dialect — lexicon, phonology &amp; intangible heritage.
-# 平江話 · Pingjiang Dialect Archive
+# 平江話 · Pianggong Dialect Archive
 
-> Digital archive of Pingjiang dialect (城关) — lexicon, phonology & intangible heritage.
+> Digital archive of Pianggong dialect (城关) — lexicon, phonology & intangible heritage.
 
-A single-file web portal documenting 23 years of fieldwork on **平江话（城关）**, a Xiang dialect with Gan influence spoken in Pingjiang County, northeastern Hunan.
+A single-file web portal documenting 23 years of fieldwork on **平江话（城关）**, a Xiang dialect with Gan influence spoken in Pingjiang County (平江 *pianggong* in local dialect), northeastern Hunan.
 
 ## Contents
 
@@ -16,10 +14,10 @@ A single-file web portal documenting 23 years of fieldwork on **平江话（城�
 
 ## Usage
 
-Open `pingjianghua.html` directly in a browser — no server or build step required. All data (vocabulary database, styles, scripts) is embedded in the single file.
+Open `pianggonghua.html` directly in a browser — no server or build step required. All data (vocabulary database, styles, scripts) is embedded in the single file.
 
 ```
-pingjianghua.html   ← main portal (≈650 KB, self-contained)
+pianggonghua.html   ← main portal (≈650 KB, self-contained)
 images/             ← optional image assets
 ```
 
@@ -37,7 +35,7 @@ images/             ← optional image assets
 
 ## Romanization
 
-This project uses **PIAANGGONGFA** (pianggong = 平江 in local dialect), a romanization system developed for Pingjiang dialect. Entering-tone syllables are marked with **ɂ** (e.g., *shaq* / ʂɑɂ⁴).
+This project uses **PIAANGGONGFA**, a romanization system developed specifically for this dialect. The name derives from the local pronunciation of 平江: standard Mandarin *Píngjiāng* → local dialect **pianggong**. Entering-tone syllables are marked with **ɂ** (e.g., *shaq* / ʂɑɂ⁴).
 
 ## Author
 
