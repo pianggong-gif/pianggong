@@ -826,6 +826,75 @@
   .reveal.visible {
     opacity:1; transform:none;
   }
+
+.pub-card {
+  margin-bottom:20px;padding:20px 24px;
+  background:var(--cream);
+  border:1px solid rgba(184,148,63,0.2);border-left:3px solid var(--red);
+  display:grid;grid-template-columns:52px 1fr;column-gap:18px;align-items:start;
+}
+.pub-year {
+  font-size:11px;color:var(--gold);letter-spacing:1px;
+  font-weight:700;padding-top:3px;grid-row:1/3;
+}
+.pub-title {
+  font-size:15px;font-weight:700;color:var(--ink);letter-spacing:1.5px;
+  font-family:'Ma Shan Zheng','STKaiti',serif;margin-bottom:5px;display:block;
+}
+a.pub-link { text-decoration:none;border-bottom:1px solid rgba(184,148,63,0.5);transition:color .2s; }
+a.pub-link:hover { color:var(--red); }
+.pub-meta { font-size:11.5px;color:var(--gray);letter-spacing:0.5px;line-height:1.8; }
+.conf-card {
+  padding:12px 16px;background:var(--cream);
+  border:1px solid rgba(184,148,63,0.15);
+  font-size:12px;color:var(--ink2);letter-spacing:0.5px;line-height:1.8;
+}
+.conf-year {
+  display:inline-block;font-size:10px;font-weight:700;color:var(--gold);
+  letter-spacing:1px;margin-right:8px;
+}
+.conf-tag {
+  display:inline-block;margin-left:6px;padding:1px 6px;
+  font-size:10px;color:var(--red);border:1px solid rgba(139,26,26,0.3);
+  letter-spacing:1px;vertical-align:middle;
+}
+.pub-section-label {
+  font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px;margin-top:36px;
+  padding-bottom:10px;border-bottom:1px solid rgba(184,148,63,0.2);
+}
+.pub-mini {
+  padding:11px 16px 11px 56px;
+  background:var(--cream);
+  border:1px solid rgba(184,148,63,0.12);border-left:2px solid rgba(184,148,63,0.35);
+  margin-bottom:8px;font-size:12px;color:var(--ink2);letter-spacing:0.5px;line-height:1.75;
+  position:relative;
+}
+.pub-mini .pm-year {
+  position:absolute;left:16px;top:13px;
+  font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1px;
+}
+.pub-cluster {
+  background:var(--cream);border:1px solid rgba(184,148,63,0.2);
+  border-left:3px solid var(--gold);margin-bottom:20px;overflow:hidden;
+}
+.pub-cluster-head {
+  padding:18px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+}
+.pub-cluster-head:hover { background:rgba(184,148,63,0.06); }
+.pub-cluster-body { display:none;padding:0 24px 16px; }
+.pub-cluster-body.open { display:block; }
+.pub-cluster-toggle {
+  font-size:11px;color:var(--gold);letter-spacing:2px;white-space:nowrap;
+}
+@media(max-width:680px){
+  .pub-card { grid-template-columns:1fr; }
+  .pub-year { grid-row:auto; }
+}
+
+  /* ── element resets ── */
+  h2.sec-title-cn { margin:0; }
+  h1.hero-title-cn { margin:0; }
+  iframe { overflow:hidden; }
 </style>
 </head>
 <body>
@@ -888,7 +957,7 @@
          onerror="this.style.display='none';">
 
     <!-- 文字回退标题（图片存在时隐藏） -->
-    <div class="hero-title-cn fade-in delay-1">平江話</div>
+    <h1 class="hero-title-cn fade-in delay-1">平江話</h1>
     <div class="hero-title-sub fade-in delay-2">PIAANGGONGFA &nbsp;·&nbsp; 平江話注音</div>
 
     <div class="hero-divider fade-in delay-2"></div>
@@ -940,9 +1009,9 @@
 </header>
 
 <!-- ═══════════════ 六大板块 ═══════════════ -->
-<section id="modules">
+<section id="modules" aria-label="板块导览">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-modules">板块导览</div>
+    <h2 class="sec-title-cn" data-i18n="sec-modules">板块导览</h2>
     <div class="sec-title-en">EXPLORE THE ARCHIVE</div>
     <div class="sec-title-line"></div>
   </div>
@@ -1029,7 +1098,7 @@
 <!-- ═══════════════ 关于平江话 ═══════════════ -->
 <section id="about">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-about">方言简介</div>
+    <h2 class="sec-title-cn" data-i18n="sec-about">方言简介</h2>
     <div class="sec-title-en">ABOUT THE DIALECT</div>
     <div class="sec-title-line"></div>
   </div>
@@ -1136,9 +1205,9 @@
 </section>
 
 <!-- ═══════════════ 非遗文化 ═══════════════ -->
-<section id="heritage">
+<section id="heritage" aria-label="非遗文化">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-heritage">非遗文化</div>
+    <h2 class="sec-title-cn" data-i18n="sec-heritage">非遗文化</h2>
     <div class="sec-title-en">INTANGIBLE CULTURAL HERITAGE</div>
     <div class="sec-title-line"></div>
   </div>
@@ -1300,9 +1369,9 @@
 </section>
 
 <!-- ═══════════════ 视频档案 ═══════════════ -->
-<section id="videos">
+<section id="videos" aria-label="视频档案">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-videos">视频档案</div>
+    <h2 class="sec-title-cn" data-i18n="sec-videos">视频档案</h2>
     <div class="sec-title-en">VIDEO ARCHIVE</div>
     <div class="sec-title-line"></div>
   </div>
@@ -1311,7 +1380,7 @@
 
     <div class="video-card reveal">
       <iframe src="https://player.bilibili.com/player.html?bvid=BV1Bn5m6NEBi&autoplay=0&danmaku=0"
-              allowfullscreen scrolling="no" allow="autoplay"></iframe>
+              allowfullscreen allow="autoplay"></iframe>
       <div class="video-card-info">
         <div class="video-card-title">
           <span class="video-cat">影戏</span>平江影戏 · 范丹
@@ -1322,7 +1391,7 @@
 
     <div class="video-card reveal">
       <iframe src="https://player.bilibili.com/player.html?bvid=BV1JL5m6BE9H&autoplay=0&danmaku=0"
-              allowfullscreen scrolling="no" allow="autoplay"></iframe>
+              allowfullscreen allow="autoplay"></iframe>
       <div class="video-card-info">
         <div class="video-card-title">
           <span class="video-cat">影戏</span>平江影戏 · 后英雄选段
@@ -1333,7 +1402,7 @@
 
     <div class="video-card reveal">
       <iframe src="https://player.bilibili.com/player.html?bvid=BV1s85t64Eqp&autoplay=0&danmaku=0"
-              allowfullscreen scrolling="no" allow="autoplay"></iframe>
+              allowfullscreen allow="autoplay"></iframe>
       <div class="video-card-info">
         <div class="video-card-title">
           <span class="video-cat">童谣</span>PG_TY_001 · banzhy
@@ -1344,7 +1413,7 @@
 
     <div class="video-card reveal">
       <iframe src="https://player.bilibili.com/player.html?bvid=BV1gwjC6UEQi&autoplay=0&danmaku=0"
-              allowfullscreen scrolling="no" allow="autoplay"></iframe>
+              allowfullscreen allow="autoplay"></iframe>
       <div class="video-card-info">
         <div class="video-card-title">
           <span class="video-cat">童谣</span>PG_TY_002 · datiege
@@ -1385,9 +1454,9 @@
 </section>
 
 <!-- ═══════════════ 方言历史 ═══════════════ -->
-<section id="history" style="background:var(--paper);padding:100px 60px;">
+<section id="history" aria-label="方言历史" style="background:var(--paper);padding:100px 60px;">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-history">方言历史</div>
+    <h2 class="sec-title-cn" data-i18n="sec-history">方言历史</h2>
     <div class="sec-title-en">DIALECT HISTORY</div>
     <div class="sec-title-line"></div>
   </div>
@@ -1502,9 +1571,9 @@
 </section>
 
 <!-- ═══════════════ 研究成就 ═══════════════ -->
-<section id="research">
+<section id="research" aria-label="廿三年积累">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-research">廿三年积累</div>
+    <h2 class="sec-title-cn" data-i18n="sec-research">廿三年积累</h2>
     <div class="sec-title-en">23 YEARS OF RESEARCH</div>
     <div class="sec-title-line"></div>
   </div>
@@ -1530,9 +1599,9 @@
 </section>
 
 <!-- ═══════════════ 关于研究者 ═══════════════ -->
-<section id="researcher" style="background:var(--paper);padding:100px 60px;">
+<section id="researcher" aria-label="关于研究者" style="background:var(--paper);padding:100px 60px;">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-researcher">关于研究者</div>
+    <h2 class="sec-title-cn" data-i18n="sec-researcher">关于研究者</h2>
     <div class="sec-title-en">ABOUT THE RESEARCHER</div>
     <div class="sec-title-line"></div>
   </div>
@@ -1674,74 +1743,10 @@
 </section>
 
 <!-- ═══════════════ 学术成果 ═══════════════ -->
-<style>
-.pub-card {
-  margin-bottom:20px;padding:20px 24px;
-  background:var(--cream);
-  border:1px solid rgba(184,148,63,0.2);border-left:3px solid var(--red);
-  display:grid;grid-template-columns:52px 1fr;column-gap:18px;align-items:start;
-}
-.pub-year {
-  font-size:11px;color:var(--gold);letter-spacing:1px;
-  font-weight:700;padding-top:3px;grid-row:1/3;
-}
-.pub-title {
-  font-size:15px;font-weight:700;color:var(--ink);letter-spacing:1.5px;
-  font-family:'Ma Shan Zheng','STKaiti',serif;margin-bottom:5px;display:block;
-}
-a.pub-link { text-decoration:none;border-bottom:1px solid rgba(184,148,63,0.5);transition:color .2s; }
-a.pub-link:hover { color:var(--red); }
-.pub-meta { font-size:11.5px;color:var(--gray);letter-spacing:0.5px;line-height:1.8; }
-.conf-card {
-  padding:12px 16px;background:var(--cream);
-  border:1px solid rgba(184,148,63,0.15);
-  font-size:12px;color:var(--ink2);letter-spacing:0.5px;line-height:1.8;
-}
-.conf-year {
-  display:inline-block;font-size:10px;font-weight:700;color:var(--gold);
-  letter-spacing:1px;margin-right:8px;
-}
-.conf-tag {
-  display:inline-block;margin-left:6px;padding:1px 6px;
-  font-size:10px;color:var(--red);border:1px solid rgba(139,26,26,0.3);
-  letter-spacing:1px;vertical-align:middle;
-}
-.pub-section-label {
-  font-size:10px;letter-spacing:5px;color:var(--gold);margin-bottom:20px;margin-top:36px;
-  padding-bottom:10px;border-bottom:1px solid rgba(184,148,63,0.2);
-}
-.pub-mini {
-  padding:11px 16px 11px 56px;
-  background:var(--cream);
-  border:1px solid rgba(184,148,63,0.12);border-left:2px solid rgba(184,148,63,0.35);
-  margin-bottom:8px;font-size:12px;color:var(--ink2);letter-spacing:0.5px;line-height:1.75;
-  position:relative;
-}
-.pub-mini .pm-year {
-  position:absolute;left:16px;top:13px;
-  font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1px;
-}
-.pub-cluster {
-  background:var(--cream);border:1px solid rgba(184,148,63,0.2);
-  border-left:3px solid var(--gold);margin-bottom:20px;overflow:hidden;
-}
-.pub-cluster-head {
-  padding:18px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
-}
-.pub-cluster-head:hover { background:rgba(184,148,63,0.06); }
-.pub-cluster-body { display:none;padding:0 24px 16px; }
-.pub-cluster-body.open { display:block; }
-.pub-cluster-toggle {
-  font-size:11px;color:var(--gold);letter-spacing:2px;white-space:nowrap;
-}
-@media(max-width:680px){
-  .pub-card { grid-template-columns:1fr; }
-  .pub-year { grid-row:auto; }
-}
-</style>
-<section id="publications" style="background:var(--paper2);padding:100px 60px;">
+
+<section id="publications" aria-label="学术成果" style="background:var(--paper2);padding:100px 60px;">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" data-i18n="sec-publications">学术成果</div>
+    <h2 class="sec-title-cn" data-i18n="sec-publications">学术成果</h2>
     <div class="sec-title-en">PUBLICATIONS &amp; RESEARCH</div>
     <div class="sec-title-line"></div>
   </div>
@@ -2282,9 +2287,9 @@ function setLang(l) {
 
 <!-- ═══════════════ 词汇搜索入口 ═══════════════ -->
 <!-- ═══════════════ 方言例句 ═══════════════ -->
-<section style="background:var(--ink);padding:80px 60px;">
+<section id="dialect-text" aria-label="原汁原味方言例句" style="background:var(--ink);padding:80px 60px;">
   <div class="sec-title reveal">
-    <div class="sec-title-cn" style="color:var(--gold2);">原汁原味</div>
+    <h2 class="sec-title-cn" style="color:var(--gold2);">原汁原味</h2>
     <div class="sec-title-en" style="color:rgba(184,148,63,0.6);">AUTHENTIC DIALECT TEXT</div>
     <div class="sec-title-line"></div>
   </div>
@@ -2334,9 +2339,9 @@ function setLang(l) {
   </div>
 </section>
 
-<section id="search-entry">
+<section id="search-entry" aria-label="词汇查询">
   <div class="sec-title reveal">
-    <div class="sec-title-cn">词汇查询</div>
+    <h2 class="sec-title-cn">词汇查询</h2>
     <div class="sec-title-en">SEARCH THE LEXICON</div>
     <div class="sec-title-line"></div>
   </div>
